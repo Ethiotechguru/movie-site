@@ -1,0 +1,36 @@
+.movies_list {
+    display         : flex;
+    justify-content : flex-start;
+    align-items     : center;
+    list-style      : none;
+    padding         : 0 10px;
+    background-color: rgb(219, 219, 219);
+    margin          : 0;
+    overflow-x      : scroll;
+}
+
+.category {
+    margin    : 4px 0 4px 30px;
+    text-align: left;
+}
+.category a{
+    text-decoration: none;
+    color: black;
+}
+.category a:hover {
+    color: lightseagreen;
+}
+.left_scroll_btn,.right_scroll_btn{
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0.411);
+    z-index: 100;
+    font-size: 5rem;
+    color: white;
+    outline: rgb(63, 36, 214);
+}
+.left_scroll_btn{
+    left: 10px;
+}
+.right_scroll_btn{
+    right: 10px;
+}

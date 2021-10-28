@@ -1,0 +1,145 @@
+.nav_container {
+    position        : fixed;
+    z-index         : 110;
+    top             : 0;
+    left            : 0;
+    display         : flex;
+    width           : 100%;
+    justify-content : space-between;
+    align-items     : center;
+    background-color: black;
+    color           : white;
+    padding         : 10px 15px;
+    box-sizing      : border-box;
+}
+.nav_link_cart{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cart_container {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.cart {
+    padding: 10px;
+}
+.cart a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav_container .logo {
+    background-color     : blueviolet;
+    padding              : 5px;
+    border-radius        : 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius   : 8px;
+    -ms-border-radius    : 8px;
+    -o-border-radius     : 8px;
+    box-sizing           : border-box;
+    box-shadow           : 1px 2px 10px gray;
+}
+
+.counter {
+    width          : 230px;
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+}
+
+.counter button:nth-child(3),
+.counter button:nth-child(1) {
+    width             : 60px;
+    outline           : none;
+    border            : none;
+    transition        : all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition   : all .3s;
+    -ms-transition    : all .3s;
+    -o-transition     : all .3s;
+}
+
+.counter h1,
+.container button {
+    font-size  : 2em;
+    font-weight: 900;
+    margin     : 10px;
+}
+.genera{
+    display: flex;
+    /* width: 40%; */
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+.genera a,.logo a{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+}
+.genera a{
+    padding: 5px 10px;
+}
+/* .genera a.active{
+    background-color: white;
+    color: black;
+    text-decoration:none;
+} */
+.genera a.active,.genera a:hover,.cart a.active {
+    text-decoration: underline lightseagreen 2px;
+}
+.counter button:nth-child(1):hover {
+    background           : linear-gradient(rgba(255, 0, 0, 0.685), rgba(230, 166, 29, 0.685));
+    color                : white;
+    border-radius        : 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius   : 50%;
+    -ms-border-radius    : 50%;
+    -o-border-radius     : 50%;
+}
+
+.danger {
+    color: tomato;
+}
+
+.success {
+    color: rgb(61, 226, 61);
+}
+
+.counter button:nth-child(3):hover {
+    background           : linear-gradient(lightgreen, rgb(90, 69, 214));
+    color                : white;
+    border-radius        : 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius   : 50%;
+    -ms-border-radius    : 50%;
+    -o-border-radius     : 50%;
+}
+
+.quantity {
+    color: greenyellow;
+}
+
+@media screen and (max-width:300px) {
+
+    .nav_container .logo,
+    .cart {
+        font-size: 1em;
+    }
+}
+@media screen and (max-width:650px) {
+    .nav_link_cart {
+        flex-direction: column-reverse;
+    }
+    .genera{
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+    }
+    .genera>li{
+        margin-bottom: 10px;
+    }
+}
